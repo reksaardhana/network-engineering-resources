@@ -18,3 +18,17 @@ def ping_sweep(ip_range):
 
 ping_sweep("192.168.1")
 
+### 2. Automasi Konfigurasi Cisco
+    from netmiko import ConnectHandler
+    ```python
+    device = {
+        'device_type': 'cisco_ios',
+        'host': '192.168.1.1',
+        'username': 'admin',
+        'password': 'password',
+    }
+
+connection = ConnectHandler(**device)
+output = connection.send_command('show ip int brief')
+print(output)
+connection.disconnect()
