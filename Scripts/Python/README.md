@@ -17,6 +17,7 @@ def ping_sweep(ip_range):
             print(f"{ip} is down")
 
 ping_sweep("192.168.1")
+```
 
 ### 2. Automasi Konfigurasi Cisco
     from netmiko import ConnectHandler
@@ -32,3 +33,4 @@ connection = ConnectHandler(**device)
 output = connection.send_command('show ip int brief')
 print(output)
 connection.disconnect()
+```
